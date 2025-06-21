@@ -30,9 +30,9 @@
   align-items: stretch;
   justify-content: center;
   background: $bg-grey;
-  width: 140px;
-  min-width: 140px;
-  max-width: 140px;
+  // width: 100%;
+  // min-width: 140px;
+  // max-width: 140px;
   height: 100%;
   min-height: 140px;
   aspect-ratio: 1 / 1;
@@ -45,8 +45,8 @@
   object-fit: cover;
   border-radius: $border-radius 0 0 $border-radius;
   display: block;
-  max-width: 120px;
-  max-height: 120px;
+  // max-width: 120px;
+  // max-height: 120px;
 }
 
 .card-body {
