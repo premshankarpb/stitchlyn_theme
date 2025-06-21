@@ -1,13 +1,12 @@
 .footer {
-  background: var(--text-dark);
-  color: var(--white);
+  background: $text-dark;
+  color: $white;
   padding: 60px 0 20px;
 }
 
 .footer-brand {
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--primary-color);
   margin-bottom: 20px;
 }
 
@@ -21,7 +20,7 @@
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 20px;
-  color: var(--white);
+  color: $white;
 }
 
 .footer-links {
@@ -40,7 +39,7 @@
 }
 
 .footer-links a:hover {
-  color: var(--primary-color);
+  color: $primary-color;
 }
 
 .social-links {
@@ -55,15 +54,15 @@
   width: 45px;
   height: 45px;
   background: rgba(255, 255, 255, 0.1);
-  color: var(--white);
+  color: $white;
   border-radius: 50%;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 .social-link:hover {
-  background-color: var(--primary-color);
-  color: var(--white);
+  background-color: $primary-color;
+  color: $white;
   transform: translateY(-2px);
 }
 

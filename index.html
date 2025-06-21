@@ -24,34 +24,36 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
+                        <a class="nav-link" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#services">Services</a>
+                        <a class="nav-link" href="/about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#features">Features</a>
+                        <a class="nav-link" href="/contact">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
+                        <a class="nav-link" href="/products">Product Catalog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
+                        <a class="nav-link" href="/quotation/create">Quotation Creation</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="customerDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Customer
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="customerDropdown">
+                            <li><a class="dropdown-item" href="/customer/dashboard">Dashboard</a></li>
+                            <li><a class="dropdown-item" href="/customer/profile/edit">Profile Edit</a></li>
+                            <li><a class="dropdown-item" href="/customer/quotation/1">Quotation Detail</a></li>
+                        </ul>
                     </li>
                 </ul>
                 
                 <div class="profile-dropdown">
-                    <div class="dropdown">
-                        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown">
-                            <i class="fas fa-user me-2"></i>Profile
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#"><i class="fas fa-user-circle me-2"></i>My Account</a></li>
-                            <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i>Settings</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
-                        </ul>
-                    </div>
+                    <a class="profile-avatar d-flex align-items-center justify-content-center rounded-circle" href="#" style="width:40px; height:40px; background:#25374e; color:#fff; font-size:1.3rem;">
+                        <i class="fas fa-user"></i>
+                    </a>
                 </div>
             </div>
         </div>
@@ -80,7 +82,7 @@
     </section>
 
     <!-- Stats Section -->
-    <section class="stats-section w-100 py-5 bg-light" data-aos="fade-up">
+    <section class="stats-section w-100 py-5" data-aos="fade-up">
       <div class="container">
         <div class="row justify-content-center text-center">
           <div class="col-12 col-md-4 mb-4 mb-md-0">
@@ -195,7 +197,51 @@
             </div>
         </div>
     </section>
-
+    <!-- Masonry Gallery Section -->
+    <section id="masonry-gallery" class="masonry-gallery-section py-5">
+      <div class="container">
+        <h2 class="section-title text-center mb-4">Inspiration Gallery</h2>
+        <p class="section-subtitle text-center mb-5">A curated selection of our finest work and creative projects.</p>
+        <div class="masonry-grid d-flex flex-column gap-3">
+          <!-- Row 1 -->
+          <div class="d-flex flex-row gap-3" style="height:220px;">
+            <div class="flex-grow-1" style="flex-basis:40%; min-width:120px;">
+              <img src="src/assets/images/main-banner1.jpg" alt="Gallery 1" class="img-fluid h-100 w-100 object-fit-cover rounded-4 shadow-sm">
+            </div>
+            <div style="flex-basis:30%; min-width:100px;">
+              <img src="src/assets/images/main-banner2.jpg" alt="Gallery 2" class="img-fluid h-100 w-100 object-fit-cover rounded-4 shadow-sm">
+            </div>
+            <div style="flex-basis:20%; min-width:80px;">
+              <img src="src/assets/images/main-banner3.jpg" alt="Gallery 3" class="img-fluid h-100 w-100 object-fit-cover rounded-4 shadow-sm">
+            </div>
+          </div>
+          <!-- Row 2 -->
+          <div class="d-flex flex-row gap-3" style="height:220px;">
+            <div style="flex-basis:25%; min-width:80px;">
+              <img src="src/assets/images/pexels-cottonbro-3738088.jpg" alt="Gallery 4" class="img-fluid h-100 w-100 object-fit-cover rounded-4 shadow-sm">
+            </div>
+            <div style="flex-basis:45%; min-width:120px;">
+              <img src="src/assets/images/pexels-cottonbro-4614241.jpg" alt="Gallery 5" class="img-fluid h-100 w-100 object-fit-cover rounded-4 shadow-sm">
+            </div>
+            <div style="flex-basis:20%; min-width:80px;">
+              <img src="src/assets/images/main-banner1.jpg" alt="Gallery 6" class="img-fluid h-100 w-100 object-fit-cover rounded-4 shadow-sm">
+            </div>
+          </div>
+          <!-- Row 3 -->
+          <div class="d-flex flex-row gap-3" style="height:220px;">
+            <div style="flex-basis:30%; min-width:100px;">
+              <img src="src/assets/images/main-banner2.jpg" alt="Gallery 7" class="img-fluid h-100 w-100 object-fit-cover rounded-4 shadow-sm">
+            </div>
+            <div style="flex-basis:25%; min-width:80px;">
+              <img src="src/assets/images/pexels-pavel-danilyuk-6461528.jpg" alt="Gallery 8" class="img-fluid h-100 w-100 object-fit-cover rounded-4 shadow-sm">
+            </div>
+            <div class="flex-grow-1" style="flex-basis:35%; min-width:120px;">
+              <img src="src/assets/images/main-banner3.jpg" alt="Gallery 9" class="img-fluid h-100 w-100 object-fit-cover rounded-4 shadow-sm">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- Services Section -->
     <section id="services" class="services-section">
         <div class="container">
@@ -208,7 +254,7 @@
                 <div class="col-lg-6">
                     <div class="card service-item flex-row align-items-center mb-4" data-aos="fade-up">
                         <div class="service-img col-4 p-0 d-flex align-items-center justify-content-center">
-                            <img src="src/assets/images/service-apparel.jpg" alt="Custom Apparel" class="img-fluid rounded-start w-100 h-100">
+                            <img src="src/assets/images" alt="Custom Apparel" class="img-fluid rounded-start w-100 h-100">
                         </div>
                         <div class="card-body col-8">
                             <div class="service-icon mb-2">
@@ -277,6 +323,9 @@
         </div>
     </section>
 
+
+    <!-- End Masonry Gallery Section -->
+
     <!-- Call to Action Section -->
     <section class="cta-section" data-aos="fade-up">
         <div class="container">
@@ -290,6 +339,52 @@
             </div>
         </div>
     </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section py-5 bg-light" data-aos="fade-up">
+      <div class="container">
+        <h2 class="section-title text-center mb-4">What Our Clients Say</h2>
+        <div class="row justify-content-center">
+          <div class="col-md-4 mb-4">
+            <div class="testimonial-card p-4 rounded-4 shadow-sm h-100 bg-white">
+              <div class="d-flex align-items-center mb-3">
+                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client 1" class="rounded-circle me-3" width="56" height="56">
+                <div>
+                  <h5 class="mb-0">Anjali M.</h5>
+                  <small class="text-muted">Entrepreneur</small>
+                </div>
+              </div>
+              <p class="mb-0">“Absolutely loved the quality and service! My custom order was delivered on time and exceeded my expectations.”</p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="testimonial-card p-4 rounded-4 shadow-sm h-100 bg-white">
+              <div class="d-flex align-items-center mb-3">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client 2" class="rounded-circle me-3" width="56" height="56">
+                <div>
+                  <h5 class="mb-0">Rahul S.</h5>
+                  <small class="text-muted">Designer</small>
+                </div>
+              </div>
+              <p class="mb-0">“The attention to detail and craftsmanship is unmatched. I recommend StitchLyn to anyone looking for quality textiles.”</p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="testimonial-card p-4 rounded-4 shadow-sm h-100 bg-white">
+              <div class="d-flex align-items-center mb-3">
+                <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Client 3" class="rounded-circle me-3" width="56" height="56">
+                <div>
+                  <h5 class="mb-0">Priya K.</h5>
+                  <small class="text-muted">Boutique Owner</small>
+                </div>
+              </div>
+              <p class="mb-0">“Beautiful designs and friendly team. The process was smooth and the results were stunning!”</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Testimonials Section -->
 
     <!-- Footer -->
     <footer class="footer" data-aos="fade-up">
@@ -310,27 +405,17 @@
                     </div>
                 </div>
                 
-                <div class="col-lg-2 col-md-6 mb-4">
+                <div class="col-lg-2 col-md-6 mb-4 ms-auto">
                     <h5 class="footer-title">Quick Links</h5>
                     <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#features">Features</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/products">Product Catalog</a></li>
+                        <li><a href="/quotation/create">Quotation Creation</a></li>
                     </ul>
                 </div>
                 
-                <div class="col-lg-2 col-md-6 mb-4">
-                    <h5 class="footer-title">Services</h5>
-                    <ul class="footer-links">
-                        <li><a href="#">Custom Apparel</a></li>
-                        <li><a href="#">Umbrellas</a></li>
-                        <li><a href="#">Home Textiles</a></li>
-                        <li><a href="#">Industrial</a></li>
-                        <li><a href="#">Consultation</a></li>
-                    </ul>
-                </div>
                 
                 <div class="col-lg-2 col-md-6 mb-4">
                     <h5 class="footer-title">Support</h5>
@@ -342,17 +427,7 @@
                         <li><a href="#">FAQ</a></li>
                     </ul>
                 </div>
-                
-                <div class="col-lg-2 col-md-6 mb-4">
-                    <h5 class="footer-title">Company</h5>
-                    <ul class="footer-links">
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">News</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                    </ul>
-                </div>
+
             </div>
             
             <div class="footer-bottom">

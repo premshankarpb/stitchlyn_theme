@@ -1,0 +1,53 @@
+// Custom color and font classes to replace Bootstrap and inline styles
+
+// Typography
+.font-primary {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+}
+.font-title {
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+}
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+// Color palette (from _variables.scss)
+.bg-primary { background: $primary-color !important; color: $white !important; }
+.bg-secondary { background: $secondary-color !important; color: $white !important; }
+.bg-accent { background: $accent-color !important; color: $text-dark !important; }
+.bg-light { background: $bg-light !important; color: $text-dark !important; }
+.bg-grey { background: $bg-grey !important; color: $text-dark !important; }
+.bg-white { background: $white !important; color: $text-dark !important; }
+
+.text-primary { color: $primary-color !important; }
+.text-secondary { color: $secondary-color !important; }
+.text-accent { color: $accent-color !important; }
+.text-dark { color: $text-dark !important; }
+.text-light { color: $text-light !important; }
+.text-white { color: $white !important; }
+
+// Button styles
+.btn-primary-custom {
+  background: $primary-color;
+  color: $white;
+  border: none;
+  &:hover, &:focus { background: darken($primary-color, 10%); color: $white; }
+}
+.btn-outline-primary-custom {
+  background: transparent;
+  color: $primary-color;
+  border: 2px solid $primary-color;
+  &:hover, &:focus { background: $primary-color; color: $white; }
+}
+
+// Remove Bootstrap's default button styles if needed
+button, .btn {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 12px 32px;
+  font-size: 1rem;
+  transition: background 0.2s, color 0.2s;
+}

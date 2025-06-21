@@ -1,6 +1,6 @@
 .features-section {
   padding: 100px 0;
-  background: var(--bg-light);
+  background: $bg-light;
 }
 
 .section-title {
@@ -8,12 +8,12 @@
   font-weight: 700;
   text-align: center;
   margin-bottom: 20px;
-  color: var(--text-dark);
+  color: $text-dark;
 }
 
 .section-subtitle {
   text-align: center;
-  color: var(--text-light);
+  color: $text-light;
   font-size: 1.1rem;
   margin-bottom: 60px;
   max-width: 600px;
@@ -22,11 +22,11 @@
 }
 
 .feature-card {
-  background: var(--white);
-  border-radius: var(--border-radius);
+  background: $white;
+  border-radius: $border-radius;
   padding: 40px 30px;
   text-align: center;
-  box-shadow: var(--shadow-light);
+  box-shadow: $shadow-light;
   transition: all 0.3s ease;
   height: 100%;
   border: none;
@@ -34,31 +34,31 @@
 
 .feature-card:hover {
   transform: translateY(-10px);
-  box-shadow: var(--shadow-medium);
+  box-shadow: $shadow-medium;
 }
 
 .feature-icon {
   font-size: 3rem;
   margin-bottom: 20px;
-  color: var(--primary-color);
+  color: $primary-color;
 }
 
 .feature-title {
   font-size: 1.3rem;
   font-weight: 600;
   margin-bottom: 15px;
-  color: var(--text-dark);
+  color: $text-dark;
 }
 
 .feature-description {
-  color: var(--text-light);
+  color: $text-light;
   line-height: 1.6;
 }
 
 .stats-section {
   width: 100%;
   padding: 3rem 0;
-  background: var(--bg-light);
+  background: $white;
 }
 
 .stats-section .stat-item {
@@ -69,12 +69,12 @@
 .stats-section .stat-number {
   font-size: 2.5rem;
   font-weight: 800;
-  color: var(--primary-color);
+  color: $primary-color;
   display: block;
 }
 
 .stats-section .stat-label {
-  color: var(--text-light);
+  color: $text-light;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.5px;

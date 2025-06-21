@@ -1,7 +1,6 @@
-
 .hero-section {
   min-height: 100vh;
-  background-color: var(--bg-light);
+  background-color: $bg-light;
   position: relative;
   display: flex;
   align-items: center;
@@ -11,25 +10,28 @@
   position: relative;
   z-index: 2;
 }
+.hero-content-container {
+  color: #fff;
+}
 .hero-title {
   font-size: 3.5rem;
   font-weight: 900;
-  color: var(--text-dark);
+  color: $text-dark;
   margin-bottom: 20px;
 }
 .hero-subtitle {
   font-size: 1.3rem;
-  color: var(--text-light);
+  color: $text-light;
   margin-bottom: 30px;
   line-height: 1.7;
 }
 .hero-stats {
-  background: var(--white);
-  border: 1px solid var(--border-color);
-  border-radius: var(--border-radius);
+  background: $white;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
   padding: 30px;
   margin-top: 50px;
-  box-shadow: var(--shadow-light);
+  box-shadow: $shadow-light;
 }
 .stat-item {
   text-align: center;
@@ -38,12 +40,39 @@
 .stat-number {
   font-size: 2.5rem;
   font-weight: 800;
-  color: var(--primary-color);
+  color: $primary-color;
   display: block;
 }
 .stat-label {
-  color: var(--text-light);
+  color: $text-light;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+}
+.masonry-img {
+  height: 260px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.masonry-img img {
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+  transition: transform 0.3s;
+}
+
+// Random widths for masonry images
+.masonry-img.w-1 { width: 100%; }
+.masonry-img.w-2 { width: 80%; }
+.masonry-img.w-3 { width: 60%; }
+.masonry-img.w-4 { width: 90%; }
+.masonry-img.w-5 { width: 70%; }
+.masonry-img.w-6 { width: 85%; }
+.masonry-img.w-7 { width: 75%; }
+.masonry-img.w-8 { width: 95%; }
+
+.masonry-img img:hover {
+  transform: scale(1.05);
 }

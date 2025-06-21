@@ -9,6 +9,22 @@ $(document).ready(function () {
     autoplaySpeed: 3500,
     arrows: false,
   });
+
+  // Initialize Slick slider for hero section
+  $(".hero-slider").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    dots: true,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    fade: true,
+    speed: 900,
+    pauseOnHover: false,
+    pauseOnFocus: false,
+    cssEase: "linear",
+    adaptiveHeight: false,
+  });
 });
 // --- JavaScript for T-Shirt Quote Functionality ---
 
