@@ -1,0 +1,49 @@
+
+.hero-section {
+  min-height: 100vh;
+  background-color: var(--bg-light);
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: var(--text-dark);
+  margin-bottom: 20px;
+}
+.hero-subtitle {
+  font-size: 1.3rem;
+  color: var(--text-light);
+  margin-bottom: 30px;
+  line-height: 1.7;
+}
+.hero-stats {
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 30px;
+  margin-top: 50px;
+  box-shadow: var(--shadow-light);
+}
+.stat-item {
+  text-align: center;
+  padding: 20px;
+}
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  display: block;
+}
+.stat-label {
+  color: var(--text-light);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
