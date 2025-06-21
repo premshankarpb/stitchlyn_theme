@@ -10,3 +10,50 @@
 @import "./_animations.scss";
 @import "./_responsive.scss";
 @import "./_custom-utility.scss";
+
+.erp-module-card,
+.erp-module-icon,
+.erp-module-title,
+.erp-module-desc,
+.feature-card,
+.feature-icon,
+.feature-title,
+.feature-description,
+.btn,
+.nav-link,
+.profile-avatar,
+.testimonial-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.erp-module-card:hover,
+.feature-card:hover,
+.testimonial-card:hover {
+  box-shadow: 0 8px 32px 0 rgba(60, 60, 120, 0.15), 0 1.5px 6px 0 rgba(0, 0, 0, 0.04);
+  transform: translateY(-4px) scale(1.03);
+}
+
+.erp-module-card:hover .erp-module-icon,
+.feature-card:hover .feature-icon {
+  color: $primary-color !important;
+  transform: scale(1.15) rotate(-6deg);
+}
+
+.btn:hover,
+.btn:focus {
+  filter: brightness(1.08);
+  transform: translateY(-2px) scale(1.04);
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: $primary-color !important;
+  text-decoration: underline;
+}
+
+.profile-avatar:hover,
+.profile-avatar:focus {
+  background: $primary-color !important;
+  color: $white !important;
+  transform: scale(1.08);
+}

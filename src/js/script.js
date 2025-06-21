@@ -10,7 +10,6 @@ $(document).ready(function () {
     arrows: false,
   });
 
-  // Initialize Slick slider for hero section
   $(".hero-slider").slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -25,7 +24,13 @@ $(document).ready(function () {
     cssEase: "linear",
     adaptiveHeight: false,
   });
+
+  AOS.init({
+        duration: 800,
+        once: true,
+      });
 });
+
 // --- JavaScript for T-Shirt Quote Functionality ---
 
 // DOM elements
@@ -244,47 +249,74 @@ quoteModal.addEventListener("hidden.bs.modal", function () {
 });
 // ----------------------------------------------------------------------------------------------
 // Navbar scroll effect
-$(window).on('scroll', function() {
-  const $navbar = $('.navbar');
+$(window).on("scroll", function () {
+  const $navbar = $(".navbar");
   if ($(window).scrollTop() > 50) {
-    $navbar.addClass('scrolled');
+    $navbar.addClass("scrolled");
   } else {
-    $navbar.removeClass('scrolled');
+    $navbar.removeClass("scrolled");
   }
 });
 
 // Smooth scrolling for navigation links
-$('a[href^="#"]').on('click', function(e) {
+$('a[href^="#"]').on("click", function (e) {
   e.preventDefault();
-  const target = $($(this).attr('href'));
+  const target = $($(this).attr("href"));
   if (target.length) {
-    $('html, body').animate({
-      scrollTop: target.offset().top
-    }, 600);
+    $("html, body").animate(
+      {
+        scrollTop: target.offset().top,
+      },
+      600
+    );
   }
 });
 
 // Animation on scroll
-const $animateElements = $('.animate-fade-up');
+const $animateElements = $(".animate-fade-up");
 $animateElements.css({
   opacity: 0,
-  transform: 'translateY(30px)',
-  transition: 'all 0.8s ease'
+  transform: "translateY(30px)",
+  transition: "all 0.8s ease",
 });
 
 function animateOnScroll() {
-  $animateElements.each(function() {
+  $animateElements.each(function () {
     const $el = $(this);
     const windowBottom = $(window).scrollTop() + $(window).height();
     const elTop = $el.offset().top;
     if (windowBottom > elTop) {
       $el.css({
         opacity: 1,
-        transform: 'translateY(0)'
+        transform: "translateY(0)",
       });
     }
   });
 }
 
-$(window).on('scroll resize', animateOnScroll);
+$(window).on("scroll resize", animateOnScroll);
 $(document).ready(animateOnScroll);
+
+// Product Detail Slick Slider
+$(document).ready(function () {
+  // Main product slider
+  if ($('.product-slider').length) {
+    $('.product-slider').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: true,
+      dots: true,
+      fade: false,
+      adaptiveHeight: true,
+      prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-chevron-left"></i></button>',
+      nextArrow: '<button type="button" class="slick-next"><i class="fas fa-chevron-right"></i></button>',
+    });
+    // Magnific Popup for slider images
+    $('.product-slider').magnificPopup({
+      delegate: 'a.gallery-popup',
+      type: 'image',
+      gallery: { enabled: true },
+      image: { titleSrc: 'title' },
+    });
+  }
+});
