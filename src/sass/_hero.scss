@@ -1,30 +1,94 @@
 .hero-section {
-  min-height: 100vh;
-  background-color: $bg-light;
   position: relative;
-  display: flex;
-  align-items: center;
+  min-height: 100vh;
+  height: 100vh;
+  background-color: $bg-light;
   overflow: hidden;
+
+  .hero-slider {
+    height: 100vh;
+    .hero-slide {
+      position: relative;
+      min-height: 100vh;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: none;
+
+      .hero-img-bg {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        z-index: 1;
+      }
+
+
+      .hero-content {
+        color: $white;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+        // background: rgba($primary-color, 0.45);
+        border-radius: 1rem;
+        padding: 2.5rem 2rem;
+        margin-left: 0;
+        margin-right: auto;
+        box-shadow: $shadow-light;
+      }
+    }
+
+    .slick-dots {
+      bottom: 24px;
+      li button:before {
+        color: #fff;
+        opacity: 0.7;
+      }
+      li.slick-active button:before {
+        color: $primary-color;
+        opacity: 1;
+      }
+    }
+
+    .slick-arrow {
+      z-index: 3;
+      width: 44px;
+      height: 44px;
+      background: rgba(0, 0, 0, 0.18);
+      border-radius: 50%;
+      color: #fff;
+      top: 50%;
+      transform: translateY(-50%);
+      &:hover {
+        background: $primary-color;
+      }
+    }
+  }
 }
+
 .hero-content {
   position: relative;
   z-index: 2;
 }
+
 .hero-content-container {
   color: $white;
 }
+
 .hero-title {
   font-size: 3.5rem;
   font-weight: 900;
-  color: $text-dark;
+      color: $white;
   margin-bottom: 20px;
 }
+
 .hero-subtitle {
   font-size: 1.3rem;
-  color: $text-light;
+       color: $white;
   margin-bottom: 30px;
   line-height: 1.7;
 }
+
 .hero-stats {
   background: $white;
   border: 1px solid $border-color;
@@ -33,22 +97,26 @@
   margin-top: 50px;
   box-shadow: $shadow-light;
 }
+
 .stat-item {
   text-align: center;
   padding: 20px;
 }
+
 .stat-number {
   font-size: 2.5rem;
   font-weight: 800;
   color: $primary-color;
   display: block;
 }
+
 .stat-label {
   color: $text-light;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
+
 .masonry-img {
   height: 260px;
   overflow: hidden;
@@ -56,6 +124,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .masonry-img img {
   height: 100%;
   object-fit: cover;
