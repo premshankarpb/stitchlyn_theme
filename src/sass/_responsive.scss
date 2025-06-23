@@ -1,0 +1,30 @@
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+  .section-title {
+    font-size: 2rem;
+  }
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+  .stat-number {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+  .feature-card,
+  .service-item {
+    padding: 25px 20px;
+  }
+}

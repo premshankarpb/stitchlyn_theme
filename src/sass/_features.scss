@@ -1,0 +1,90 @@
+.features-section {
+  padding: 100px 0;
+  background: $bg-light;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+  color: $text-dark;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: $text-light;
+  font-size: 1.1rem;
+  margin-bottom: 60px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.feature-card {
+  background: $white;
+  border-radius: $border-radius;
+  padding: 40px 30px;
+  text-align: center;
+  box-shadow: $shadow-light;
+  transition: all 0.3s ease;
+  height: 100%;
+  border: none;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: $shadow-medium;
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: $primary-color;
+}
+
+.feature-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: $text-dark;
+}
+
+.feature-description {
+  color: $text-light;
+  line-height: 1.6;
+}
+
+.stats-section {
+  width: 100%;
+  padding: 3rem 0;
+  background: $white;
+}
+
+.stats-section .stat-item {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.stats-section .stat-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: $primary-color;
+  display: block;
+}
+
+.stats-section .stat-label {
+  color: $text-light;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+  .stats-section .stat-number {
+    font-size: 2rem;
+  }
+}
+.product-slider a{
+  display: inline-block;
+}

@@ -1,0 +1,40 @@
+// Theme variables updated to new palette
+$primary-color: #25374e; // prussian-blue
+$primary-dark: #38455a; // charcoal-2
+$secondary-color: #4a5161; // charcoal
+$secondary-dark: #38455a; // charcoal-2
+$accent-color: #cccbcd; // silver
+$text-dark: #25374e; // prussian-blue
+$text-light: #4a5161; // charcoal
+$bg-light: #f8f9fa; // seasalt
+$bg-grey: #cccbcd; // silver
+$bg-lighter: #ffffff;
+$border-color: #cccbcd; // silver
+$success-color: #4a5161; // charcoal
+$info-color: #38455a; // charcoal-2
+$warning-color: #cccbcd; // silver
+$white: #ffffff;
+$shadow-light: 0 2px 4px rgba(37, 55, 78, 0.08);
+$shadow-medium: 0 4px 12px rgba(37, 55, 78, 0.13);
+$border-radius: 10px;
+
+// New color variables for convenience
+$prussian-blue: #25374e;
+$charcoal: #4a5161;
+$charcoal-2: #38455a;
+$seasalt: #f8f9fa;
+$silver: #cccbcd;
+
+// Gradients
+$gradient-top: linear-gradient(0deg, $prussian-blue, $charcoal, $charcoal-2, $seasalt, $silver);
+$gradient-right: linear-gradient(90deg, $prussian-blue, $charcoal, $charcoal-2, $seasalt, $silver);
+$gradient-bottom: linear-gradient(180deg, $prussian-blue, $charcoal, $charcoal-2, $seasalt, $silver);
+$gradient-left: linear-gradient(270deg, $prussian-blue, $charcoal, $charcoal-2, $seasalt, $silver);
+$gradient-top-right: linear-gradient(45deg, $prussian-blue, $charcoal, $charcoal-2, $seasalt, $silver);
+$gradient-bottom-right: linear-gradient(135deg, $prussian-blue, $charcoal, $charcoal-2, $seasalt, $silver);
+$gradient-top-left: linear-gradient(225deg, $prussian-blue, $charcoal, $charcoal-2, $seasalt, $silver);
+$gradient-bottom-left: linear-gradient(315deg, $prussian-blue, $charcoal, $charcoal-2, $seasalt, $silver);
+$gradient-radial: radial-gradient($prussian-blue, $charcoal, $charcoal-2, $seasalt, $silver);
+
+$navbar-avatar-bg: $bg-grey;
+$navbar-avatar-color: $primary-color;
