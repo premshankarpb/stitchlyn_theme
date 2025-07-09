@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor Detail - StitchLyn</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="src/sass/styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="admin-layout">
+        <!-- Header (Same as index.html) -->
+        <nav class="navbar navbar-expand-lg fixed-top">
+          <div class="container">
+            <a class="navbar-brand" href="./index.html">
+              <i class="fa-solid fa-people-arrows"></i>StitchLyn
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="./index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./about.html">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./contact.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./product-listing.html">Products</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="servicesDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Services
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                    <li>
+                      <a class="dropdown-item" href="/services/custom-design">Custom Design</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="/services/consulting">Consulting</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="/services/support">Support</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="profile-dropdown dropdown">
+                <a
+                  class="profile-avatar d-flex align-items-center justify-content-center rounded-circle"
+                  href="#"
+                  id="profileDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="fas fa-user"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                  <li>
+                    <a class="dropdown-item" href="/customer/dashboard">Dashboard</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/customer/quotation/1">Quotation Detail</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/quotation/create">Quotation Creation</a>
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li><a class="dropdown-item" href="/logout">Logout</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Sidebar -->
+        <aside class="admin-sidebar">
+            <div class="sidebar-content">
+                <div class="quick-actions">
+                    <h5 class="mb-3">Quick Actions</h5>
+                    <div class="list-group">
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="fas fa-plus-circle me-2"></i> Add New Vendor
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="fas fa-file-export me-2"></i> Export List
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="fas fa-chart-bar me-2"></i> View Reports
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-main">
+            <div class="mb-4">
+                <h1 class="display-5 fw-bold text-primary mb-3">Textile Masters Ltd.</h1>
+                <span class="badge bg-success mb-3">Active</span>
+            </div>
+            <div class="row g-4 mb-5">
+                <div class="col-md-6 col-lg-5">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title mb-3">Vendor Details</h5>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><i class="fas fa-map-marker-alt text-primary me-2"></i> <strong>Location:</strong> Mumbai, India</li>
+                                <li class="list-group-item"><i class="fas fa-tag text-primary me-2"></i> <strong>Category:</strong> Textiles, Raw Materials</li>
+                                <li class="list-group-item"><i class="fas fa-envelope text-primary me-2"></i> <strong>Email:</strong> info@textilemasters.com</li>
+                                <li class="list-group-item"><i class="fas fa-phone text-primary me-2"></i> <strong>Phone:</strong> +91 98765 43210</li>
+                                <li class="list-group-item"><i class="fas fa-globe text-primary me-2"></i> <strong>Website:</strong> <a href="#" class="text-decoration-underline">www.textilemasters.com</a></li>
+                                <li class="list-group-item"><i class="fas fa-star text-warning me-2"></i> <strong>Rating:</strong> 4.0/5</li>
+                                <li class="list-group-item"><i class="fas fa-calendar-alt text-primary me-2"></i> <strong>Member Since:</strong> 2018</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-7">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title mb-3">About Vendor</h5>
+                            <p>Textile Masters Ltd. is a leading supplier of high-quality textiles and raw materials, serving clients across India since 2018. We pride ourselves on our commitment to quality, timely delivery, and customer satisfaction.</p>
+                            <div class="mt-4">
+                                <button class="btn btn-primary me-2">Contact Vendor</button>
+                                <button class="btn btn-outline-primary">View Products</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Purchase Details Section (Div-based layout) -->
+            <div class="card mb-5">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">Purchase Details</h5>
+                </div>
+                <div class="card-body p-0">
+                    <div class="purchase-list">
+                        <div class="row fw-bold border-bottom bg-light py-2 gx-0">
+                            <div class="col-2">Purchase ID</div>
+                            <div class="col-2">Date</div>
+                            <div class="col-2">Product</div>
+                            <div class="col-2">Quantity</div>
+                            <div class="col-2">Amount</div>
+                            <div class="col-2">Status</div>
+                        </div>
+                        <div class="row align-items-center border-bottom py-2 gx-0">
+                            <div class="col-2">#1001</div>
+                            <div class="col-2">2025-06-01</div>
+                            <div class="col-2">Cotton Fabric</div>
+                            <div class="col-2">500</div>
+                            <div class="col-2">₹25,000</div>
+                            <div class="col-2"><span class="badge bg-success">Completed</span></div>
+                        </div>
+                        <div class="row align-items-center border-bottom py-2 gx-0">
+                            <div class="col-2">#1002</div>
+                            <div class="col-2">2025-05-15</div>
+                            <div class="col-2">Polyester Yarn</div>
+                            <div class="col-2">300</div>
+                            <div class="col-2">₹12,000</div>
+                            <div class="col-2"><span class="badge bg-warning text-dark">Pending</span></div>
+                        </div>
+                        <div class="row align-items-center border-bottom py-2 gx-0">
+                            <div class="col-2">#1003</div>
+                            <div class="col-2">2025-04-28</div>
+                            <div class="col-2">Silk Thread</div>
+                            <div class="col-2">200</div>
+                            <div class="col-2">₹8,000</div>
+                            <div class="col-2"><span class="badge bg-danger">Cancelled</span></div>
+                        </div>
+                        <!-- Add more purchase rows as needed -->
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="admin-footer">
+            <p class="mb-0">&copy; 2025 StitchLyn. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="src/js/script.js"></script>
+</body>
+</html>

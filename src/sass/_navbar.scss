@@ -4,6 +4,8 @@
   border-bottom: 1px solid rgba($white, 0.1);
   transition: all 0.3s ease;
   padding: 15px 0;
+  box-shadow: 0 4px 12px -6px rgba($primary-color, 0.12), 0 1.5px 0 0 rgba($primary-color, 0.08);
+  /* Subtle shadow for header threat identification */
 }
 .navbar.scrolled {
   background: rgba($white, 0.98);

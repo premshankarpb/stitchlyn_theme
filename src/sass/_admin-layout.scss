@@ -1,0 +1,92 @@
+.admin-layout {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+  grid-template-rows: 70px 1fr 60px;
+  grid-template-columns: 20% 80%;
+  height: 100vh;
+  overflow: hidden;
+
+  .admin-header {
+    grid-area: header;
+    background: $white;
+    border-bottom: 1px solid $border-color;
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+
+    .logo {
+      height: 40px;
+      img {
+        height: 100%;
+        width: auto;
+      }
+    }
+  }
+
+  .admin-sidebar {
+    grid-area: sidebar;
+    background: $bg-light;
+    border-right: 1px solid $border-color;
+    padding: 2rem;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    bottom: 60px;
+    width: 20%;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: rgba($primary-color, 0.2);
+      border-radius: 3px;
+    }
+  }
+
+  .admin-main {
+    grid-area: main;
+    padding: 2rem;
+    margin-top: 70px;
+    margin-bottom: 60px;
+    margin-left: 20%;
+    overflow-y: auto;
+    height: calc(100vh - 130px);
+
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: rgba($primary-color, 0.2);
+      border-radius: 3px;
+    }
+  }
+
+  .admin-footer {
+    grid-area: footer;
+    background: $white;
+    border-top: 1px solid $border-color;
+    padding: 1rem 2rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
