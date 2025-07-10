@@ -8,34 +8,87 @@
   border: none;
 }
 .btn-primary {
-  background-color: $primary-color;
-  border-color: $primary-color;
-  color: $white;
+  background-color: $primary-dark !important;
+  border-color: $primary-dark !important;
+  color: $white !important;
   box-shadow: $shadow-light;
 }
-.btn-primary:hover {
-  background-color: $primary-dark;
-  border-color: $primary-dark;
-  transform: translateY(-2px);
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: $primary-color !important;
+  border-color: $primary-color !important;
+  color: $white !important;
   box-shadow: $shadow-medium;
 }
+.btn-primary:disabled,
+.btn-primary.disabled {
+  background-color: $bg-grey !important;
+  border-color: $bg-grey !important;
+  color: $white !important;
+  opacity: 0.7;
+}
+
 .btn-outline-primary {
-  border: 2px solid $primary-color;
-  color: $primary-color;
+  border: 2px solid $primary-dark;
+  color: $primary-dark;
   background: transparent;
 }
-.btn-outline-primary:hover {
-  background: $primary-color;
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:active {
+  background: $primary-dark;
   color: $white;
+  border-color: $primary-dark;
   transform: translateY(-2px);
 }
+.btn-outline-primary:disabled,
+.btn-outline-primary.disabled {
+  background: $bg-grey;
+  color: $white;
+  border-color: $bg-grey;
+  opacity: 0.7;
+}
+
 .btn-light {
   background: $white;
   color: $text-dark;
-  border: none;
+  border: 1px solid $border-color;
   font-weight: 600;
 }
-.btn-light:hover {
-  background: rgba(255, 255, 255, 0.9);
+.btn-light:hover,
+.btn-light:focus,
+.btn-light:active {
+  background: $bg-light;
+  color: $primary-dark;
+  border-color: $primary-dark;
   transform: translateY(-3px);
+}
+.btn-light:disabled,
+.btn-light.disabled {
+  background: $bg-grey;
+  color: $white;
+  border-color: $bg-grey;
+  opacity: 0.7;
+}
+
+.btn-secondary {
+  background: $secondary-color;
+  color: $white;
+  border: 1px solid $secondary-dark;
+}
+.btn-secondary:hover,
+.btn-secondary:focus,
+.btn-secondary:active {
+  background: $secondary-dark;
+  color: $white;
+  border-color: $secondary-dark;
+  transform: translateY(-2px);
+}
+.btn-secondary:disabled,
+.btn-secondary.disabled {
+  background: $bg-grey;
+  color: $white;
+  border-color: $bg-grey;
+  opacity: 0.7;
 }

@@ -4,9 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vendor Detail - StitchLyn</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="src/sass/styles.css" rel="stylesheet">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      rel="stylesheet"
+    />
+    <!-- Magnific Popup CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
+    />
+    <link rel="stylesheet" href="src/sass/styles.css" />
 </head>
 <body>
     <div class="admin-layout">
@@ -92,22 +112,43 @@
         </nav>
 
         <!-- Sidebar -->
-        <aside class="admin-sidebar">
+        <aside class="admin-sidebar dark-sidebar">
             <div class="sidebar-content">
-                <div class="quick-actions">
-                    <h5 class="mb-3">Quick Actions</h5>
-                    <div class="list-group">
-                        <a href="#" class="list-group-item list-group-item-action">
-                            <i class="fas fa-plus-circle me-2"></i> Add New Vendor
-                        </a>
-                        <a href="#" class="list-group-item list-group-item-action">
-                            <i class="fas fa-file-export me-2"></i> Export List
-                        </a>
-                        <a href="#" class="list-group-item list-group-item-action">
-                            <i class="fas fa-chart-bar me-2"></i> View Reports
-                        </a>
-                    </div>
-                </div>
+                <nav class="sidebar-menu aesthetic-sidebar">
+                  <ul class="sidebar-list">
+                    <li class="sidebar-group has-submenu">
+                      <a href="#" class="sidebar-link sidebar-parent d-flex justify-content-between align-items-center" data-toggle="sidebar-dropdown" tabindex="0">
+                        <span><i class="fas fa-list me-2"></i>Vendor Management</span>
+                        <i class="fas fa-chevron-right sidebar-arrow"></i>
+                      </a>
+                      <ul class="sidebar-sublist" style="display: none;">
+                        <li><a href="vendor-listing.html" class="sidebar-link"><i class="fas fa-table-list me-2"></i>Vendor Listing</a></li>
+                        <li><a href="vendor-detail.html" class="sidebar-link"><i class="fas fa-id-card me-2"></i>Vendor Detail</a></li>
+                        <li><a href="purchase.html" class="sidebar-link"><i class="fas fa-shopping-cart me-2"></i>Purchase</a></li>
+                      </ul>
+                    </li>
+                    <li class="sidebar-group has-submenu">
+                      <a href="#" class="sidebar-link sidebar-parent d-flex justify-content-between align-items-center" data-toggle="sidebar-dropdown" tabindex="0">
+                        <span><i class="fas fa-file-invoice me-2"></i>Quotations</span>
+                        <i class="fas fa-chevron-right sidebar-arrow"></i>
+                      </a>
+                      <ul class="sidebar-sublist" style="display: none;">
+                        <li><a href="quotation.html" class="sidebar-link"><i class="fas fa-list-ul me-2"></i>Quotation Listing</a></li>
+                        <li><a href="#" class="sidebar-link"><i class="fas fa-plus me-2"></i>Create Quotation</a></li>
+                      </ul>
+                    </li>
+                    <li class="sidebar-group has-submenu">
+                      <a href="#" class="sidebar-link sidebar-parent d-flex justify-content-between align-items-center" data-toggle="sidebar-dropdown" tabindex="0">
+                        <span><i class="fas fa-cogs me-2"></i>Settings</span>
+                        <i class="fas fa-chevron-right sidebar-arrow"></i>
+                      </a>
+                      <ul class="sidebar-sublist" style="display: none;">
+                        <li><a href="#" class="sidebar-link"><i class="fas fa-user-cog me-2"></i>Profile</a></li>
+                        <li><a href="#" class="sidebar-link"><i class="fas fa-sliders-h me-2"></i>Preferences</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </nav>
             </div>
         </aside>
 
@@ -198,8 +239,42 @@
         </footer>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+     <!-- jQuery 3.7.1 -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap 5.3.3 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Slick Slider JS -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <!-- AOS Animate JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- Magnific Popup JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <!-- Custom Script -->
     <script src="src/js/script.js"></script>
+    <script>
+// Sidebar dropdown toggle logic (robust, supports nested)
+$(function() {
+  $(document).off('click keydown', '.sidebar-parent[data-toggle="sidebar-dropdown"]');
+  $(document).on('click keydown', '.sidebar-parent[data-toggle="sidebar-dropdown"]', function(e) {
+    if (e.type === 'click' || (e.type === 'keydown' && (e.key === 'Enter' || e.key === ' '))) {
+      e.preventDefault();
+      var $group = $(this).closest('li');
+      var $submenu = $group.children('.sidebar-sublist').first();
+      var $arrow = $(this).find('.sidebar-arrow');
+      if ($submenu.is(':visible')) {
+        $submenu.slideUp(180);
+        $arrow.removeClass('fa-chevron-down').addClass('fa-chevron-right');
+      } else {
+        $submenu.slideDown(180);
+        $arrow.removeClass('fa-chevron-right').addClass('fa-chevron-down');
+      }
+    }
+  });
+  $('.sidebar-parent[data-toggle="sidebar-dropdown"]').css('cursor', 'pointer');
+});
+    </script>
 </body>
 </html>

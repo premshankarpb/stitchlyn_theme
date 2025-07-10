@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Purchase - StitchLyn</title>
+  <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      rel="stylesheet"
+    />
+    <!-- Magnific Popup CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
+    />
+    <link rel="stylesheet" href="src/sass/styles.css" />
+  </head>
+  <body>
+    <div class="admin-layout">
+      <!-- Header (Replaced with index.html navbar) -->
+      <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="./index.html">
+            <i class="fa-solid fa-people-arrows"></i>StitchLyn
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="./index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./contact.html">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./product-listing.html">Products</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="servicesDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Services
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                  <li>
+                    <a class="dropdown-item" href="/services/custom-design"
+                      >Custom Design</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/services/consulting"
+                      >Consulting</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/services/support"
+                      >Support</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <div class="profile-dropdown dropdown">
+              <a
+                class="profile-avatar d-flex align-items-center justify-content-center rounded-circle"
+                href="#"
+                id="profileDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="fas fa-user"></i>
+              </a>
+              <ul
+                class="dropdown-menu dropdown-menu-end"
+                aria-labelledby="profileDropdown"
+              >
+                <li>
+                  <a class="dropdown-item" href="/customer/dashboard"
+                    >Dashboard</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/customer/quotation/1"
+                    >Quotation Detail</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/quotation/create"
+                    >Quotation Creation</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="/logout">Logout</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Sidebar -->
+      <aside class="admin-sidebar dark-sidebar">
+            <div class="sidebar-content">
+    
+                <nav class="sidebar-menu aesthetic-sidebar">
+                  <ul class="sidebar-list">
+                    <li class="sidebar-group has-submenu">
+                      <a href="#" class="sidebar-link sidebar-parent d-flex justify-content-between align-items-center" data-toggle="sidebar-dropdown" tabindex="0">
+                        <span><i class="fas fa-list me-2"></i>Vendor Management</span>
+                        <i class="fas fa-chevron-right sidebar-arrow"></i>
+                      </a>
+                      <ul class="sidebar-sublist" style="display: none;">
+                        <li><a href="vendor-listing.html" class="sidebar-link"><i class="fas fa-table-list me-2"></i>Vendor Listing</a></li>
+                        <li><a href="vendor-detail.html" class="sidebar-link"><i class="fas fa-id-card me-2"></i>Vendor Detail</a></li>
+                        <li><a href="purchase.html" class="sidebar-link"><i class="fas fa-shopping-cart me-2"></i>Purchase</a></li>
+                      </ul>
+                    </li>
+                    <li class="sidebar-group has-submenu">
+                      <a href="#" class="sidebar-link sidebar-parent d-flex justify-content-between align-items-center" data-toggle="sidebar-dropdown" tabindex="0">
+                        <span><i class="fas fa-file-invoice me-2"></i>Quotations</span>
+                        <i class="fas fa-chevron-right sidebar-arrow"></i>
+                      </a>
+                      <ul class="sidebar-sublist" style="display: none;">
+                        <li><a href="quotation.html" class="sidebar-link"><i class="fas fa-list-ul me-2"></i>Quotation Listing</a></li>
+                        <li><a href="#" class="sidebar-link"><i class="fas fa-plus me-2"></i>Create Quotation</a></li>
+                      </ul>
+                    </li>
+                    <li class="sidebar-group has-submenu">
+                      <a href="#" class="sidebar-link sidebar-parent d-flex justify-content-between align-items-center" data-toggle="sidebar-dropdown" tabindex="0">
+                        <span><i class="fas fa-cogs me-2"></i>Settings</span>
+                        <i class="fas fa-chevron-right sidebar-arrow"></i>
+                      </a>
+                      <ul class="sidebar-sublist" style="display: none;">
+                        <li><a href="#" class="sidebar-link"><i class="fas fa-user-cog me-2"></i>Profile</a></li>
+                        <li><a href="#" class="sidebar-link"><i class="fas fa-sliders-h me-2"></i>Preferences</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </nav>
+            </div>
+        </aside>
+
+      <!-- Main Content -->
+      <main class="admin-main">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h2 class="mb-0">Vendor Listing</h2>
+          <div class="main-actions">
+            <div class="input-group">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Search vendors..."
+              />
+              <button class="btn btn-primary">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="purchase-section">
+          <div class="container">
+            <h1 class="display-4">Design Your Custom T-Shirts</h1>
+            <p class="lead">
+              Get a free, instant quote for your custom apparel needs.
+            </p>
+          </div>
+        </div>
+
+        <!-- Customer Quotation Form -->
+        <div class="container mt-5 mb-5">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="card shadow-lg">
+                <div class="card-header text-center">
+                  <h3>Customer Information</h3>
+                </div>
+                <div class="card-body p-4">
+                  <form>
+                    <!-- Name Input -->
+                    <div class="mb-3">
+                      <label for="customerName" class="form-label"
+                        >Full Name</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="customerName"
+                        placeholder="e.g., John Doe"
+                        required
+                      />
+                    </div>
+
+                    <!-- Email and Phone -->
+                    <div class="row mb-3">
+                      <div class="col-md-6">
+                        <label for="customerEmail" class="form-label"
+                          >Email address</label
+                        >
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="customerEmail"
+                          placeholder="you@example.com"
+                          required
+                        />
+                      </div>
+                      <div class="col-md-6">
+                        <label for="customerPhone" class="form-label"
+                          >Phone Number</label
+                        >
+                        <input
+                          type="tel"
+                          class="form-control"
+                          id="customerPhone"
+                          placeholder="123-456-7890"
+                        />
+                      </div>
+                    </div>
+
+                    <!-- Address -->
+                    <div class="mb-3">
+                      <label for="customerAddress" class="form-label"
+                        >Shipping Address</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="customerAddress"
+                        placeholder="1234 Main St, City, State, ZIP"
+                      />
+                    </div>
+
+                    <!-- Radio Buttons for Delivery Type -->
+                    <div class="mb-3">
+                      <label class="form-label">Delivery Option</label>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="deliveryOptions"
+                          id="standardDelivery"
+                          value="standard"
+                          checked
+                        />
+                        <label class="form-check-label" for="standardDelivery">
+                          Standard Shipping (5-7 days)
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="deliveryOptions"
+                          id="expressDelivery"
+                          value="express"
+                        />
+                        <label class="form-check-label" for="expressDelivery">
+                          Express Shipping (1-2 days)
+                        </label>
+                      </div>
+                    </div>
+
+                    <!-- Special Instructions -->
+                    <div class="mb-4">
+                      <label for="specialInstructions" class="form-label"
+                        >Special Instructions or Design Notes</label
+                      >
+                      <textarea
+                        class="form-control"
+                        id="specialInstructions"
+                        rows="4"
+                        placeholder="Any details about your design, like text, colors, or placement."
+                      ></textarea>
+                    </div>
+
+                    <!-- FINAL Quote Summary (Populated after modal close) -->
+                    <div
+                      id="finalQuoteSummary"
+                      class="mt-4 border-top pt-4"
+                      style="display: none"
+                    >
+                      <h4 class="text-center mb-3">Your T-Shirt Quotation</h4>
+                      <div class="accordion" id="finalQuoteAccordion">
+                        <!-- Final quote items will be populated here by JS -->
+                      </div>
+                      <div
+                        id="finalQuoteTotal"
+                        class="text-end fw-bold fs-5 mt-3"
+                      >
+                        <!-- Final total will be populated here by JS -->
+                      </div>
+                    </div>
+
+                    <!-- Checkbox for terms -->
+                    <div class="mb-3 form-check mt-4">
+                      <input
+                        type="checkbox"
+                        class="form-check-input"
+                        id="termsCheck"
+                        required
+                      />
+                      <label class="form-check-label" for="termsCheck"
+                        >I agree to the terms and conditions.</label
+                      >
+                    </div>
+                    <div class="mb-3 form-check mt-4 text-center">
+                      <button
+                        type="button"
+                        class="btn btn-light btn-lg mt-3 fw-bold"
+                        data-bs-toggle="modal"
+                        data-bs-target="#quoteModal"
+                      >
+                        Get an Instant Quote
+                      </button>
+                    </div>
+                    <!-- Submit Button -->
+                    <div class="d-grid">
+                      <button type="submit" class="btn btn-primary btn-lg">
+                        Submit Full Quotation
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bootstrap Modal for Quick Quote -->
+        <div
+          class="modal fade"
+          id="quoteModal"
+          tabindex="-1"
+          aria-labelledby="quoteModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="quoteModalLabel">
+                  Build Your T-Shirt Quote
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close btn-close-white"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <div class="container-fluid">
+                  <div class="row mb-3">
+                    <!-- Size Dropdown -->
+                    <div class="col-md-4">
+                      <label for="tshirtSize" class="form-label">Size</label>
+                      <select class="form-select" id="tshirtSize">
+                        <option value="Small">Small</option>
+                        <option value="Medium" selected>Medium</option>
+                        <option value="Large">Large</option>
+                        <option value="X-Large">X-Large</option>
+                        <option value="XX-Large">XX-Large</option>
+                      </select>
+                    </div>
+                    <!-- Quantity Dropdown -->
+                    <div class="col-md-4">
+                      <label for="tshirtCount" class="form-label"
+                        >Quantity</label
+                      >
+                      <select class="form-select" id="tshirtCount">
+                        <option value="1">1</option>
+                        <option value="5">5</option>
+                        <option value="10" selected>10</option>
+                        <option value="25">25</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                      </select>
+                    </div>
+                    <!-- Color Dropdown -->
+                    <div class="col-md-4">
+                      <label for="tshirtColor" class="form-label">Color</label>
+                      <select class="form-select" id="tshirtColor">
+                        <option value="White" selected>White</option>
+                        <option value="Black">Black</option>
+                        <option value="Navy">Navy</option>
+                        <option value="Red">Red</option>
+                        <option value="Royal Blue">Royal Blue</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <!-- Add Item Button -->
+                  <div class="row mb-4">
+                    <div class="col-12 d-grid">
+                      <button
+                        type="button"
+                        class="btn btn-success"
+                        id="addItemBtn"
+                      >
+                        Add Item to Quote
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Quote Accordion -->
+                  <div class="mt-4">
+                    <h5 class="text-center">Your Quote Summary</h5>
+                    <div class="accordion mt-3" id="quoteAccordion">
+                      <!-- Accordion items will be populated by JavaScript -->
+                    </div>
+                    <div id="quoteTotal" class="text-end fw-bold fs-5 mt-3">
+                      <!-- Total will be populated by JavaScript -->
+                    </div>
+                    <p id="emptyQuoteMsg" class="text-muted text-center mt-3">
+                      Your quote is empty. Add an item to begin.
+                    </p>
+                    <p class="text-muted text-center">
+                      <small
+                        >Prices are estimates. Bulk discounts may apply.</small
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Proceed to Checkout
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer class="admin-footer">
+        <p class="mb-0">&copy; 2025 StitchLyn. All rights reserved.</p>
+      </footer>
+    </div>
+
+   <!-- jQuery 3.7.1 -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap 5.3.3 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Slick Slider JS -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <!-- AOS Animate JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- Magnific Popup JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <!-- Custom Script -->
+    <script src="src/js/script.js"></script>
+    <script>
+// Sidebar dropdown toggle logic (robust, supports nested)
+$(function() {
+  $(document).off('click keydown', '.sidebar-parent[data-toggle="sidebar-dropdown"]');
+  $(document).on('click keydown', '.sidebar-parent[data-toggle="sidebar-dropdown"]', function(e) {
+    if (e.type === 'click' || (e.type === 'keydown' && (e.key === 'Enter' || e.key === ' '))) {
+      e.preventDefault();
+      var $group = $(this).closest('li');
+      var $submenu = $group.children('.sidebar-sublist').first();
+      var $arrow = $(this).find('.sidebar-arrow');
+      if ($submenu.is(':visible')) {
+        $submenu.slideUp(180);
+        $arrow.removeClass('fa-chevron-down').addClass('fa-chevron-right');
+      } else {
+        $submenu.slideDown(180);
+        $arrow.removeClass('fa-chevron-right').addClass('fa-chevron-down');
+      }
+    }
+  });
+  $('.sidebar-parent[data-toggle="sidebar-dropdown"]').css('cursor', 'pointer');
+});
+    </script>
+  </body>
+</html>
