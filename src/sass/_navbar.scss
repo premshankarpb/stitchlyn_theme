@@ -42,7 +42,7 @@
   border-color: $secondary-dark;
   transform: scale(1.02);
 }
-.profile-dropdown .dropdown-menu {
+.profile-dropdown .dropdown-menus {
   border-radius: $border-radius;
   border: none;
   box-shadow: $shadow-medium;
@@ -135,7 +135,7 @@
 .profile-dropdown {
   position: relative;
 }
-.profile-dropdown .dropdown-menu {
+.profile-dropdown .dropdown-menus {
   right: 0;
   left: auto;
   top: 110%;
@@ -148,7 +148,7 @@
   z-index: 1050;
 }
 @media (max-width: 991.98px) {
-  .profile-dropdown .dropdown-menu {
+  .profile-dropdown .dropdown-menus {
     position: static;
     box-shadow: none;
     min-width: 100%;
