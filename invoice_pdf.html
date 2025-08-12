@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stitchlyn - Invoice</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 0;
+        }
+        @media print {
+            body {
+                width: 210mm;
+                height: 297mm;
+                margin: 0;
+                padding: 20mm;
+                box-sizing: border-box;
+            }
+        }
+    </style>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 30px; box-sizing: border-box;">
+    <div style="max-width: 210mm; margin: 0 auto;">
+        <!-- Header Section -->
+        <div style="display: flex; justify-content: space-between; margin-bottom: 30px;">
+            <div>
+                <h1 style="color: #333; margin: 0; font-size: 24px;">TAX INVOICE</h1>
+                <div style="margin-top: 10px; color: #666;">
+                    <strong>Invoice #:</strong> <span style="color: #ff4444;">ST256057</span>
+                </div>
+            </div>
+            <div style="text-align: right;">
+                <img src="src/assets/images/logo.png" alt="Stitchlyn Logo" style="height: 60px;">
+            </div>
+        </div>
+
+        <!-- Company Details -->
+        <div style="display: flex; justify-content: space-between; margin-bottom: 30px;">
+            <div style="flex: 1;">
+                <h3 style="color: #333; margin: 0 0 10px 0;">STITCHLYN</h3>
+                <p style="margin: 0; color: #666; line-height: 1.5;">
+                    123 Fashion Street, Design District<br>
+                    Bangalore, Karnataka 560001<br>
+                    Phone: +91 80 1234 5678<br>
+                    Email: info@stitchlyn.com<br>
+                    GSTIN: 29AABCS1234Z1ZX
+                </p>
+            </div>
+            <div style="flex: 1; text-align: right;">
+                <p style="margin: 0; color: #666; line-height: 1.5;">
+                    <strong>Issue Date:</strong> 24-Jul-2025<br>
+                    <strong>Due Date:</strong> 07-Aug-2025<br>
+                    <strong>Place of Supply:</strong> KA (29)
+                </p>
+            </div>
+        </div>
+
+        <!-- Bill To & Ship To -->
+        <div style="display: flex; justify-content: space-between; margin-bottom: 30px;">
+            <div style="flex: 1;">
+                <h4 style="color: #333; margin: 0 0 10px 0;">Bill To</h4>
+                <p style="margin: 0; color: #666; line-height: 1.5;">
+                    VIMS PET HOSPITAL<br>
+                    5AC 951, HRBR Layout<br>
+                    Outer ring road, Babuspalya<br>
+                    Bengaluru, Karnataka 560043<br>
+                    GSTIN: 29AAYFV3915F1ZJ
+                </p>
+            </div>
+            <div style="flex: 1;">
+                <h4 style="color: #333; margin: 0 0 10px 0;">Ship To</h4>
+                <p style="margin: 0; color: #666; line-height: 1.5;">
+                    VIMS PET HOSPITAL<br>
+                    5AC 951, HRBR Layout<br>
+                    Outer ring road, Babuspalya<br>
+                    Bengaluru, Karnataka 560043<br>
+                    Contact: +91 96328 74572
+                </p>
+            </div>
+        </div>
+
+        <!-- Invoice Table -->
+        <table style="width: 100%; border-collapse: collapse; margin-bottom: 30px;">
+            <thead>
+                <tr style="background-color: #ff4444; color: white;">
+                    <th style="padding: 10px; text-align: left;">S.No</th>
+                    <th style="padding: 10px; text-align: left;">Description</th>
+                    <th style="padding: 10px; text-align: right;">Price</th>
+                    <th style="padding: 10px; text-align: right;">Taxable Value</th>
+                    <th style="padding: 10px; text-align: right;">IGST @18%</th>
+                    <th style="padding: 10px; text-align: right;">Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td style="padding: 10px;">1</td>
+                    <td style="padding: 10px;">Custom Tailoring Service<br><small style="color: #666;">Basic alterations and fitting</small></td>
+                    <td style="padding: 10px; text-align: right;">2,500.00</td>
+                    <td style="padding: 10px; text-align: right;">2,500.00</td>
+                    <td style="padding: 10px; text-align: right;">450.00</td>
+                    <td style="padding: 10px; text-align: right;">2,950.00</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td style="padding: 10px;">2</td>
+                    <td style="padding: 10px;">Premium Fabric<br><small style="color: #666;">3 meters of wool blend</small></td>
+                    <td style="padding: 10px; text-align: right;">3,000.00</td>
+                    <td style="padding: 10px; text-align: right;">3,000.00</td>
+                    <td style="padding: 10px; text-align: right;">540.00</td>
+                    <td style="padding: 10px; text-align: right;">3,540.00</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3" style="padding: 10px;"></td>
+                    <td colspan="2" style="padding: 10px; text-align: right; font-weight: bold;">Total</td>
+                    <td style="padding: 10px; text-align: right; font-weight: bold;">6,490.00</td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <!-- Bank Details -->
+        <div style="margin-bottom: 30px;">
+            <h4 style="color: #333; margin: 0 0 10px 0;">Bank Details</h4>
+            <p style="margin: 0; color: #666; line-height: 1.5;">
+                Bank Name: HDFC Bank<br>
+                Account Number: 50200086169366<br>
+                IFSC Code: HDFC0004896<br>
+                Branch Name: FASHION DISTRICT
+            </p>
+        </div>
+
+        <!-- Terms and Conditions -->
+        <div style="margin-bottom: 50px;">
+            <h4 style="color: #333; margin: 0 0 10px 0;">Terms & Conditions</h4>
+            <p style="margin: 0; color: #666; font-size: 12px; line-height: 1.5;">
+                1. Payment is due within 14 days<br>
+                2. Please include invoice number on payment<br>
+                3. All prices are in INR
+            </p>
+        </div>
+
+        <!-- Signature -->
+        <div style="margin-top: 40px; text-align: right; padding-right: 20px; position: relative;">
+            <div style="border-top: 1px solid #666; width: 200px; display: inline-block; padding-top: 10px;">
+                <p style="margin: 0; color: #333; font-weight: bold;">Authorized Signature</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
