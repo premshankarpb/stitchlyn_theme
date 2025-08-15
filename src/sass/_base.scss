@@ -12,11 +12,15 @@ body {
   color: $text-dark;
   overflow-x: hidden;
   padding-top: 87px;
+  &.toolbar-tray-open {
+    padding-top: 166px;
+  }
 }
 
 .page-banner-section {
   height: 220px;
-  background: url('../assets/images/main-banner1.jpg') center center/cover no-repeat;
+  background: url("../assets/images/main-banner1.jpg") center center/cover
+    no-repeat;
   position: relative;
 
   .page-banner-overlay {
@@ -35,7 +39,8 @@ body {
 
 .page-banner-section {
   height: 220px;
-  background: url('../assets/images/main-banner1.jpg') center center/cover no-repeat;
+  background: url("../assets/images/main-banner1.jpg") center center/cover
+    no-repeat;
   position: relative;
 }
 .page-banner-section .page-banner-overlay,
